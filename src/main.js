@@ -1,3 +1,6 @@
+import "onsenui/css/onsenui.css";
+import "onsenui/css/onsen-css-components.css";
+
 import Vue from "vue";
 import App from "./App.vue";
 
