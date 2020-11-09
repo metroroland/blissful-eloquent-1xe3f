@@ -3,7 +3,11 @@
     <v-ons-page>
       <Titlebar />
       <Searchbar />
-      <img src="./assets/logo.png" width="25%" />
+      <img src="require('!!raw-loader!./assets/logo.png')" width="25%" />
+      <div style="width: 10vw">
+        <span v-html="imgVueLogo" style="color: red !important"></span>
+      </div>
+      <img :src="imgVuelogo" width="25%" />
       <HelloWorld msg="Hello Vue in CodeSandbox!" />
       <CreditSection />
     </v-ons-page>
@@ -12,9 +16,10 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld";
-import Titlebar from "./components/Titlebar.vue";
-import Searchbar from "./components/Searchbar.vue";
-import CreditSection from "./components/CreditSection.vue";
+import Titlebar from "./components/Titlebar";
+import Searchbar from "./components/Searchbar";
+import CreditSection from "./components/CreditSection";
+import imgVueLogo from "@/assets/barcode.svg";
 export default {
   name: "App",
   components: {
@@ -22,6 +27,11 @@ export default {
     Titlebar,
     Searchbar,
     CreditSection,
+  },
+  data: function () {
+    return {
+      imgVueLogo: imgVueLogo,
+    };
   },
 };
 </script>

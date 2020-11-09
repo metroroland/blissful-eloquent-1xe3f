@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
+    "image-webpack-loader": "7.0.1",
     "onsenui": "2.11.1",
     "vue": "^2.6.11",
     "vue-onsenui": "2.6.2"
